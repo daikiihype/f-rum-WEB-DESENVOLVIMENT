@@ -1,0 +1,145 @@
+:root {
+  --primary-color: #fd5050;
+  --background-color: #151c23;
+  --card-background: #0D1117;
+  --icon-background: #2c2e33;
+  --text-color: white;
+  --description-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+body {
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--card-background);
+
+    border-radius: 30px;
+    border: 1px solid gray;
+
+}
+/* Container que separa Título e o Bloco de ícones */
+.header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha o quadradinho ao topo da linha do H1 */
+    width: 100%;
+}
+.redes-sociais {
+    display: flex;
+    gap: 10px;
+}
+/* O "Quadradinho" com fundo preto mais claro */
+.icone-redes {
+    display: flex;
+    gap: 15px;                  /* Espaço entre os ícones */
+    background-color: var(--icon-background);  /* Um cinza escuro/preto mais claro */
+    padding: 10px;              /* Espaço interno para não encostar na borda */
+    border-radius: 8px;         /* Cantos arredondados (opcional) */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra suave para dar profundidade */
+}
+
+/* Ajuste fino nas imagens se necessário */
+.icone-redes img {
+    display: block;
+    transition: transform 0.2s; /* Efeitozinho ao passar o mouse */
+}
+
+.icone-redes img:hover {
+    transform: scale(1.1);
+}
+
+.titulo-descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5em;
+}
+
+.lista-atividades{
+    padding:0 1.5em 1.5em 1.5em;
+}
+
+.container-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lista {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--icon-background);
+    padding: 1em;
+    border-radius: 10px;
+    flex-wrap: wrap; 
+}
+
+.seta {
+    margin-left: auto; 
+    cursor: pointer;
+}
+.icone-seta{
+    padding: 4px;
+    border-radius: 10px;
+    filter: brightness(0) invert(1);
+}
+.icone-seta:hover {
+    background-color: var( --background-color);
+    transition: 0.5s;
+
+}
+.descricao {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0 10px;
+    color: var(--description-color);
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+/* quando clicar */
+.lista.ativa .descricao {
+    max-height: 200px; /* ajusta conforme o tamanho */
+    margin-top: 10px;
+    padding: 10px;
+}
